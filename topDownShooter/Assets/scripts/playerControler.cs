@@ -33,11 +33,15 @@ public class playerControler : MonoBehaviour {
         jump();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
         if (maxjumps != currentJumps)
         {
             currentJumps = maxjumps;
+        }
+        if (col.gameObject.tag == "Finish")
+        {
+            Debug.Log("Need to make the finnish");
         }
     }
 

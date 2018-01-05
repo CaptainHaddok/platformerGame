@@ -591,7 +591,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: e20020f6-3bff-4a07-81bd-c3fc1a0ed5ba
-  projectName: topDownShooter
+  projectName: platformer game
   organizationId: captain_haddok
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

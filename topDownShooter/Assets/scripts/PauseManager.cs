@@ -10,8 +10,8 @@ public class PauseManager : MonoBehaviour {
 
 	void Start ()
     {
-		
-	}
+        Cursor.visible = false;
+    }
 	
 	void Update ()
     {
@@ -32,10 +32,12 @@ public class PauseManager : MonoBehaviour {
         if (menu.active == true)
         {
             Time.timeScale = 0;
+            Cursor.visible = true;
         }
         else
         {
             Time.timeScale = 1;
+            Cursor.visible = false;
         }
     }
 }

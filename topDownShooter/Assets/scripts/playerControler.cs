@@ -35,7 +35,7 @@ public class playerControler : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if (maxjumps != currentJumps)
+        if (maxjumps != currentJumps && col.gameObject.tag == "ground")
         {
             currentJumps = maxjumps;
         }

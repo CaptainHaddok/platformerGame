@@ -41,6 +41,7 @@ public class playerControler : MonoBehaviour {
         }
         if (col.gameObject.tag == "Finish")
         {
+            Destroy(col.collider);
             Debug.Log("Need to make the finnish");
         }
     }

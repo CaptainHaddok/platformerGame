@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
 
     public GameObject menu;
+    public Camera NormalCam;
+    public Camera PauseCam;
 
 	void Start ()
     {
         Cursor.visible = false;
+        Time.timeScale = 1;
+        PauseCam.gameObject.SetActive(false);
+        NormalCam.gameObject.SetActive(true);
     }
 	
 	void Update ()
@@ -33,11 +37,15 @@ public class PauseManager : MonoBehaviour {
         {
             Time.timeScale = 0;
             Cursor.visible = true;
+            PauseCam.gameObject.SetActive(true);
+            NormalCam.gameObject.SetActive(false);
         }
         else
         {
             Time.timeScale = 1;
             Cursor.visible = false;
+            PauseCam.gameObject.SetActive(false);
+            NormalCam.gameObject.SetActive(true);
         }
     }
 }
